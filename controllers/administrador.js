@@ -40,9 +40,9 @@ export const createAdministrador = async (req, res) => {
 };
 //login
 export const loginAdministrador = async (req, res) => {
-    const { correo, contraseña } = req.body;
+    const { Correo, contraseña } = req.body;
 
-    if (!correo || !contraseña) {
+    if (!Correo || !contraseña) {
         return res.status(400).json({ message: 'Correo y contraseña son requeridos.' });
     }
 
@@ -65,7 +65,7 @@ export const loginAdministrador = async (req, res) => {
     }
 };
 export const resetPassword = async (req, res) => {
-    const { correo, nuevaContraseña } = req.body;
+    const { Correo, nuevaContraseña } = req.body;
 
     if (!correo || !nuevaContraseña) {
         return res.status(400).json({ success: false, message: 'Correo y nueva contraseña son requeridos.' });
