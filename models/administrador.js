@@ -9,23 +9,23 @@ const Administrador = db.define('administrador', {
         primaryKey: true,
         autoIncrement: true
     },
-    nombre: { // Usar notación camelCase
+    Nombre: { // Usar notación camelCase
         type: DataTypes.STRING,
         allowNull: false
     },    
-    fechaNacimiento: {
+    FechaNacimiento: {
         type: DataTypes.DATE,
         allowNull: false
     },
-    tipoDoc: {
+    TipoDoc: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    numeroDoc: {
+    NumeroDoc: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    correo: {
+    Correo: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true, // Asegura que el correo sea único
