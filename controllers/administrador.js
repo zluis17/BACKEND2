@@ -40,14 +40,14 @@ export const createAdministrador = async (req, res) => {
 };
 //login
 export const loginAdministrador = async (req, res) => {
-    const { correo, contraseña } = req.body;
-    console.log(correo, contraseña)
+    const { Correo, contraseña } = req.body;
+    console.log(Correo, contraseña)
     if (!Correo || !contraseña) {
         return res.status(400).json({ message: 'Correo y contraseña son requeridos.' });
     }
 
     try {
-        const administrador = await Administrador.findOne({ where: { correo } });
+        const administrador = await Administrador.findOne({ where: { Correo } });
         if (!administrador) {
             return res.status(404).json({ message: 'Administrador no encontrado.' });
         }
@@ -67,12 +67,12 @@ export const loginAdministrador = async (req, res) => {
 export const resetPassword = async (req, res) => {
     const { Correo, nuevaContraseña } = req.body;
 
-    if (!correo || !nuevaContraseña) {
+    if (!Correo || !nuevaContraseña) {
         return res.status(400).json({ success: false, message: 'Correo y nueva contraseña son requeridos.' });
     }
 
     try {
-        const administrador = await Administrador.findOne({ where: { correo } });
+        const administrador = await Administrador.findOne({ where: { Correo } });
         if (!administrador) {
             return res.status(404).json({ success: false, message: 'Administrador no encontrado.' });
         }
