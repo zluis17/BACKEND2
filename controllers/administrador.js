@@ -47,7 +47,7 @@ export const loginAdministrador = async (req, res) => {
     }
 
     try {
-        const administrador = await Administrador.findOne({ where: { Correo } });
+        const administrador = await Administrador.findOne({ where: { correo } });
         if (!administrador) {
             return res.status(404).json({ message: 'Administrador no encontrado.' });
         }
