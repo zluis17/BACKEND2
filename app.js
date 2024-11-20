@@ -14,7 +14,7 @@ const startServer = async () => {
         await db.authenticate();
         console.log('Conexión exitosa a la base de datos');
         app.listen(8000, () => {
-            console.log('Servidor corriendo en http://localhost:8000/');
+            console.log('Servidor corriendo en  https://backend2-mhjh.onrender.com');
         });
     } catch (error) {
         console.log(`El error de conexión es: ${error}`);
