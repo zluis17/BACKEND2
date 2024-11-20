@@ -42,7 +42,7 @@ export const createAdministrador = async (req, res) => {
 export const loginAdministrador = async (req, res) => {
     const { correo, contraseña } = req.body;
     console.log(correo, contraseña)
-    if (!Correo || !contraseña) {
+    if (!correo || !contraseña) {
         return res.status(400).json({ message: 'Correo y contraseña son requeridos.' });
     }
 
